@@ -20,5 +20,6 @@ public class Project1 {
 		testThree.generateTwinPrimes();
 		testThree.generateHexPrimes();
 		testThree.printHexes();
+		
 	}
 }
