@@ -8,8 +8,8 @@ import java.math.BigInteger;
 public class PrimesOperations {
 	// Pair class implementation.
 	private class Pair<T> {
-	  T first;
-		T second;
+	  private T first;
+		private T second;
 		// Pair constructor
 		Pair(T first, T second) {
 		  this.first = first;
@@ -77,6 +77,7 @@ public class PrimesOperations {
 		
 	// Generate and store a list of primes.
 	public void generatePrimes(int count) {
+		primes.clear();
 		int i = 0;
 		BigInteger prime = BigInteger.valueOf(2); 
 		while(i < count) {

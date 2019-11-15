@@ -16,7 +16,7 @@ public class Project1 {
 		
 		// Generate and test Hexagonal crosses
 		PrimesOperations testThree = new PrimesOperations();
-		testThree.generatePrimes(15000);
+		testThree.generatePrimes(2000);
 		testThree.generateTwinPrimes();
 		testThree.generateHexPrimes();
 		testThree.printHexes();
