@@ -2,21 +2,21 @@ public class Project1 {
 	public static void main(String[] args) 
 	{
 		// Instantiate Primes Class
-		Primes p = new Primes();
+		PrimesOperations testOne = new PrimesOperations();
 		
 		// Generate Primes and test.
-		p.generatePrimes(21);
-		p.printPrimes();
+		testOne.generatePrimes(21);
+		testOne.printPrimes();
 		
 		// Generate and test Twin Primes
-		Primes testtwo = new Primes();
-		testtwo.generatePrimes(100);
-		testtwo.generateTwinPrimes();
-		testtwo.printTwins();
+		PrimesOperations testTwo = new PrimesOperations();
+		testTwo.generatePrimes(100);
+		testTwo.generateTwinPrimes();
+		testTwo.printTwins();
 		
 		// Generate and test Hexagonal crosses
-		Primes testThree = new Primes();
-		testThree.generatePrimes(2000);
+		PrimesOperations testThree = new PrimesOperations();
+		testThree.generatePrimes(15000);
 		testThree.generateTwinPrimes();
 		testThree.generateHexPrimes();
 		testThree.printHexes();
