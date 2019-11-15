@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.math.BigInteger;
 
 /*
- *  Desc: This class generates primes, twin primes, and hexagon crosses using BigInteger data types.
+ *  Desc: This class generates primes, twin primes, and hexagon crosses using BigInteger data 
+ *  types.
  */
 public class PrimesOperations {
 	// Pair class implementation.
@@ -24,12 +25,14 @@ public class PrimesOperations {
 		}
 	}
 	
-	// Member variables for containing out lists of integers, twin primes, hexagon crosses, and the pairs of twin primes that make up the hex crosses.
+	// Member variables for containing out lists of integers, twin primes, hexagon crosses, and the
+	// pairs of twin primes that make up the hex crosses.
 	private ArrayList<BigInteger> primes = new ArrayList<BigInteger>(0);
 	private ArrayList<Pair<BigInteger>> pairs = new ArrayList<Pair<BigInteger>>(0);
 	private ArrayList<Pair<BigInteger>> hexagonPairs = new ArrayList<Pair<BigInteger>>(0);
 	
-	// Add a prime to the prime list if and only iff it is not already in the list. (ignore duplicates)
+	// Add a prime to the prime list if and only iff it is not already in the list. (ignore 
+	// duplicates)
 	public void addPrime(BigInteger x) {
 		boolean duplicates = false;
 		for(int i = 0; i < primes.size(); i++) {
@@ -41,7 +44,8 @@ public class PrimesOperations {
 		}
 	}
 	
-	// Output the prime list. Each prime should be on a separate line and the total number of primes should be on the following line.
+	// Output the prime list. Each prime should be on a separate line and the total number of 
+	// primes should be on the following line.
 	public void printPrimes() {
 		for(int i = 0; i < primes.size(); i++) {
 			System.out.println(primes.get(i));
@@ -49,7 +53,8 @@ public class PrimesOperations {
 		System.out.println("Total Primes: " + primes.size());
 	}
 		
-	// Output the twin prime list. Each twin prime should be on a separate line with a comma separating them, and the total number of twin primes should be on the following line.
+	// Output the twin prime list. Each twin prime should be on a separate line with a comma 
+	// separating them, and the total number of twin primes should be on the following line.
 	public void printTwins() {
 		for(int i = 0; i < pairs.size(); i++) {
 			System.out.println(pairs.get(i).getFirst() + ", " + pairs.get(i).getSecond());
@@ -57,7 +62,8 @@ public class PrimesOperations {
 		System.out.println("Total Pairs: " + pairs.size());
 	}
 		
-	// Output the hexagon cross list. Each should be on a separate line listing the two twin primes and the corresponding hexagon cross, with the total number on the following line.
+	// Output the hexagon cross list. Each should be on a separate line listing the two twin 
+	// primes and the corresponding hexagon cross, with the total number on the following line.
 	public void printHexes() {
 		for(int i = 0; i < hexagonPairs.size(); i++) {
 			System.out.print(hexagonPairs.get(i).getFirst().subtract(BigInteger.valueOf(1)) + ", " 
@@ -92,7 +98,8 @@ public class PrimesOperations {
 		}
 	}
 	
-	// Generate and store the hexagon crosses, along with the two twin primes that generate the hexagon cross.
+	// Generate and store the hexagon crosses, along with the two twin primes that generate the 
+	// hexagon cross.
 	public void generateHexPrimes() {
 		for(int i = 0; i < pairs.size(); i++) {
 			BigInteger a = middleOfPair(pairs.get(i));
